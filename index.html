@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <div class="sidebar-heading"><img src="logo.png"/><span>Dashboard</span></div>
+        <div class="list-group list-group-flush border-right">
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-home"></i>Início</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-users"></i>Funcionários</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-box-open"></i>Produtos</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-sitemap"></i>Categorias</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-people-carry"></i>Fornecedores</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="far fa-chart-bar"></i>Relatórios</a>
+        </div>
+    </div>
+    
+    <!-- Conteúdo -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light" id="main-navbar">
+        <span id="menu-toggle" class="mr-auto"><img src="logo.png" class="mx-auto d-block"/></span>
+        <a class="navbar-brand"href="#" id="navbar-site-title">Painel</a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dashboard-navbar-collapse" aria-controls="dashboard-navbar-collapse" aria-expanded="false" aria-label="Exibe Barra de Navegação">
+          <span class="navbar-toggler-icon">
+    
+          </span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="dashboard-navbar-collapse">
+          <form class="form-inline" id="navbar-search-form">
+            <input type="text" class="form-control form-field navbar-search-field" placeholder="Pesquisar" id="navbar-search-field">
+          </form>
+      
+          <div id="navbar-profile" class="ms-auto">
+            <img src="https://avatars.githubusercontent.com/u/17712401" alt="Profile Image">
+            <span>Lucas Alves</span>
+          </div>
+        </div>
+      </nav>
+      <div id="content" class="container">
+        <!-- Formulário -->
+        <h3 id="main-page-form-title" class="main-text-3">Novo artigo</h3>
+        <div class="dashboard-form">
+          <form>
+            <div class="form-group">
+              <label>Autor</label>
+              <input class="form-field navbar-search-field form-control" id="user-field" placeholder="Autor">
+              <hr>
+            </div>
+
+            <div class="form-group">
+              <label>Título</label>
+              <input class="form-field navbar-search-field form-control" id="title-field" placeholder="Título">
+              <hr>
+            </div>
+
+            <div class="form-group">
+              <label>Conteúdo</label>
+              <textarea placeholder="Um texto" class="form-field navbar-search-field form-control" id="body-field"></textarea>
+              <hr>
+            </div>
+
+            <div class="form-group">
+              <label>Data</label>
+              <input type="date" class="form-field navbar-search-field form-control" id="date-field">
+              <hr>
+            </div>
+
+            <div class="confirm-btns">
+              <button class="btn btn-primary">Criar  e adicionar outro</button>
+              <button class="btn btn-primary">Publicar post</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script> 
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  
+  <!-- Boostrap JS -->
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $('#menu-toggle').click(function(event) {
+      event.preventDefault();
+      $("#wrapper").toggleClass("toggled"); // Se existir => Remove || Se não existe => Adiciona
+    });
+  </script>
+</body>
+</html>
