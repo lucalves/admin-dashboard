@@ -51,43 +51,137 @@
         </div>
       </nav>
       <div id="content" class="container">
+        <!-- Tabela -->
+        <div class="table-title">
+          <h3>Usuários</h3>
+          <input type="text" class="form-control form-field navbar-search-field" placeholder="Pesquisar">
+        </div>
+        <table class="table bg-white">
+          <thead>
+            <tr>
+              <th class="table-col-title">#</th>
+              <th class="table-col-title">Nome</th>
+              <th class="table-col-title">Sobrenome</th>
+              <th class="table-col-title">Usuário</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Lucas</td>
+              <td>Alves</td>
+              <td>@lucalvesnj</td>
+            </tr>
+          </tbody>
+        </table>
+
         <!-- Formulário -->
         <h3 id="main-page-form-title" class="main-text-3">Novo artigo</h3>
-        <div class="dashboard-form">
-          <form>
-            <div class="form-group">
-              <label>Autor</label>
-              <input class="form-field navbar-search-field form-control" id="user-field" placeholder="Autor">
-              <hr>
+        <div>
+          <form class="card dashboard-form">
+            <div class="card-body dashboard-form-body">
+              <div class="form-group">
+                <label>Autor</label>
+                <input class="form-field navbar-search-field form-control" id="user-field" placeholder="Autor">
+                <hr>
+              </div>
+  
+              <div class="form-group">
+                <label>Título</label>
+                <input class="form-field navbar-search-field form-control" id="title-field" placeholder="Título">
+                <hr>
+              </div>
+  
+              <div class="form-group">
+                <label>Conteúdo</label>
+                <textarea placeholder="Um texto" class="form-field navbar-search-field form-control" id="body-field"></textarea>
+                <hr>
+              </div>
+  
+              <div class="form-group">
+                <label>Data</label>
+                <input type="date" class="form-field navbar-search-field form-control" id="date-field">
+              </div>
             </div>
 
-            <div class="form-group">
-              <label>Título</label>
-              <input class="form-field navbar-search-field form-control" id="title-field" placeholder="Título">
-              <hr>
-            </div>
-
-            <div class="form-group">
-              <label>Conteúdo</label>
-              <textarea placeholder="Um texto" class="form-field navbar-search-field form-control" id="body-field"></textarea>
-              <hr>
-            </div>
-
-            <div class="form-group">
-              <label>Data</label>
-              <input type="date" class="form-field navbar-search-field form-control" id="date-field">
-              <hr>
-            </div>
-
-            <div class="confirm-btns">
+            <div class="confirm-btns card-footer">
               <button class="btn btn-primary">Criar  e adicionar outro</button>
               <button class="btn btn-primary">Publicar post</button>
             </div>
-
           </form>
+        </div>
+
+      <h3 id="vendas-h3">Vendas</h3>
+
+      <div class="card" id="relatory-card">
+        <div class="card-body">
+          <canvas id="relatory" width="400" height="100">
+
+          </canvas>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- Scripts -->
@@ -106,5 +200,43 @@
       $("#wrapper").toggleClass("toggled"); // Se existir => Remove || Se não existe => Adiciona
     });
   </script>
+  <script src="js/chart/chart.min.js"></script>
+  <script>
+    var ctx = document.getElementById('relatory');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
 </body>
 </html>
