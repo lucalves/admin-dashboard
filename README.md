@@ -10,6 +10,7 @@
 
 - [Bootstrap](https://getbootstrap.com/)
 - [JQuery](https://jquery.com/)
+- [Chart.js](https://www.chartjs.org/)
 
 ## Install
 
