@@ -24,5 +24,5 @@ $ cd admin-dashboard
 # Open the repository in the IDE (If you use VS Code)
 $ code .
 
-# Just open the index.html file!
+# Just open the index.html file or run with live server!
 ```
